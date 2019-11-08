@@ -9,13 +9,10 @@
         <meta name="keywords" content="Java, Junior Java Developer, Java Developer">
         <meta name="author" content="Programista, Trochonowicz Daniel">
 
-
-        <title>Daniel Trochonowicz Wizytówka</title>
-
+        <title>Daniel Trochonowicz</title>
         <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
-        
     </head>
 
     <div id="particles-js"></div>
@@ -94,10 +91,11 @@
             <h2 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4">Kontakt</h2>
         </div>
         <div class="contact-info">
-            <form>
-                <input type="text" class="textField wow fadeInUp" data-wow-duration="1.3s" data-wow-delay=".9" placeholder="Twoje Imię" required="">
-                <input type="text" class="textField wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1" placeholder="Email" required="">
-                <textarea class="textField messageField wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.1" placeholder="Twoja Wiadomość"></textarea>
+            <div id="send_form_status"></div>
+            <form action="skrypt.php" method="post">
+                <input type="text" name="name" id="name" class="textField wow fadeInUp" data-wow-duration="1.3s" data-wow-delay=".9" placeholder="Twoje Imię" required="">
+                <input type="text" name="email" id="email" class="textField wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1" placeholder="Email" required="">
+                <textarea type="text" name="message" class="textField messageField wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.1" placeholder="Twoja Wiadomość"></textarea>
                 <input type="submit" class="textField submitButton wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.8" value="Wyślij Wiadomosc">
             </form>
         </div>
@@ -109,7 +107,7 @@
             <a href="https://shopgameservice.herokuapp.com/page-main" style="color:white" target="_blank" class="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay="2.6s"> Projekt</a><br>
         </div>
     </section>
-    
+</form>
 
     <!--MUZYKA DO WYKORZYSTANIA NA STRONIE https://www.youtube.com/watch?v=l4907hT-8mM&list=RDykI7glq9LRE&index=27 -->
 
@@ -132,5 +130,21 @@
             }
         });
         </script>
+         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+         <script>
+             $(document).ready(function() {
+             $("html").on("submit","#contact_form",function(e){
+                 e.preventDefault();
+                 $("#send_form_status").html('').hide();
+                 var data=$("#contact_form").serialize();
+                 $.post("/send_form.php",data,function(res){
+                 $("#send_form_status").html(res.msg).show();
+                 if(res.status==1){ 
+                     $("#contact_form")[0].reset();
+                 } 
+                 });
+             });
+          });
+         </script>
     </body>
 </html>
