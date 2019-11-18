@@ -128,13 +128,11 @@ section {
 	border-bottom: 1px solid;
 	text-transform: uppercase;
 	padding: 0 0 10px;
-} 
-
+}
 /* ABOUT SECTION STYLE*/
 .about{
 	padding: 150px 0;
 }
-
 .about-info{
 	width: 50%;
 	margin: 0 auto;
@@ -143,13 +141,10 @@ section {
 	font-size: 50px;
 	z-index: 99;
 }
-
 .about-info p{
 	line-height: 40px;
 	font-size: 20px;
 }
-
-
 .about-info .downloadbtn{
 	display: inline-block;
 	padding:  15px 35px;
@@ -164,7 +159,6 @@ section {
 	position: relative;
 	z-index: 999;
 }
-
 /*SERVICE SECTION STYLE*/
 .service{
 	width: 60%;
@@ -173,12 +167,10 @@ section {
 	text-align: center;
 	z-index: 99;
 }
-
 .service .service-info{
 	margin: 50px 0;
 	font-size: 35px;
 }
-
 /*CONTACT*/
 .contact{
 	width: 60%;
@@ -186,20 +178,17 @@ section {
 	padding: 150px 0;
 	z-index: 99;
 }
-
 .contact-info{
 	display: flex;
 	justify-content: center;
 	margin: 50px 0;
 }
-
 .contact .media{
 	text-align: center;
 	line-height: 40px;
 	font-size: 30px;
 	color: rgb(243, 243, 243);
 }
-
 .contact-info .textField{
 	width: 100%;
 	height: 50px;
@@ -212,11 +201,9 @@ section {
 	color: #fff;
 	font-size: 16px;
 }
-
 .contact-info .messageField{
 	height: 200px;
 }
-
 .contact-info .submitButton{
 	background-color: #fff;
 	color: #000;
@@ -226,8 +213,6 @@ section {
 	cursor: pointer;
 	text-transform: uppercase;
 }
-
-
 @media (orientation: portrait) {
 	header ul li a {
 		margin: 0 10px;
@@ -274,7 +259,6 @@ section {
 		height: 100px;
 	}
 }
-
 @media (orientation: landscape) {
 	header ul li a {
 		margin: 0 10px;
@@ -320,7 +304,6 @@ section {
 	.contact-info .messageField{
 		height: 100px;
 	}
-	
 	@media (min-width: 1024px) {
 		header ul li a {
 			margin: 0 15px;
