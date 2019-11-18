@@ -93,6 +93,7 @@ section {
 /*HOME SECTION*/
 .home{
 	color: #ffffff;
+	/* color: #b6827b; */
 	padding: 0;
 	text-align: center;
 	display: flex;
