@@ -118,6 +118,15 @@ section {
 	border-radius: 2px;
 	visibility: hidden;
 }
+.photo {
+	width: 20rem;
+	height: 20rem;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5%;
+	object-fit: cover;
+	border-radius: 50%;
+}
 /* SECTION TITLE STYLE*/
 .section-title{
 	text-align: center;
